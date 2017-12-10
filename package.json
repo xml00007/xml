@@ -1,5 +1,5 @@
 {
-  "name": "xml",
+  "name": "xml-cmd",
   "version": "1.0.0",
   "description": "xml  信明良自己的命令行工具",
   "scripts": {
@@ -10,7 +10,8 @@
   "bin": {
     "xml": "bin/xml.js",
     "xml-build": "bin/xml-build.js",
-    "xml-clean": "bin/xml-clean.js"
+    "xml-clean": "bin/xml-clean.js",
+    "xml-logs": "bin/xml-logs.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependexmles": {
+  "dependencies": {
     "chalk": "^2.1.0",
     "cli-table": "^0.3.1",
     "commander": "^2.11.0",
@@ -29,7 +30,7 @@
     "semver": "^5.4.1",
     "simple-ssh": "^1.0.0"
   },
-  "devDependexmles": {
+  "devDependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.8.0",
     "eslint-config-google": "^0.9.1",

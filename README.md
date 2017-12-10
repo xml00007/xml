@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-# xml
-常用命令的命令行工具
-=======
 # 安装
 
 ```bash
-cnpm i -g nchannel-cli
+cnpm i -g xml-cmd
 ```
 
 # 命令行界面
@@ -69,7 +65,6 @@ nci -h
 
 ```json
 { 
-  "scope": "@nirvana",
   "tpub": "test-env-npm-registry-url",
   "pub": "paas-prod-env-npm-registry-url",
   "nppub": "paas-test-env-npm-registry-url",
@@ -91,34 +86,7 @@ nci -h
 
 # 用法说明
 
-- 升级开发项目,找回自动提醒功能
-
-> 项目升级，通过 git submodule 子模块方式在当前项目下引入依赖项目 `nchannel-core`, 保存在当前项目根目录下的 `dependency` 目录，
- 并自动将 `dependency/packages` 下的所有包 `link` 到 `node_modules`
 
 ```bash
-# 请在开发项目下执行 如 'nchannel-kaniu', 'nchannel-openapi'
-
-nci project upgrade #  upgrade 可简写为 up
-# 或
-nci-project upgrade #  upgrade 可简写为 up
+xml build # bootstrap 可简写为 bs
 ```
-
-- 更新依赖项目 `nchannel-core`
-
-> nci update 执行 `git submodule update --remote --init`,  并自动 `link` 到 `node_module`
-
-```bash
-nci update # update 命令简写 nci up
-# 或
-nci-update
-```
-
-- 安装项目依赖
-
-> 安装依赖包并自动 `link` 到 `node_module`
-
-```bash
-nci bootstrap # bootstrap 可简写为 bs
-```
->>>>>>> # 第一次提交

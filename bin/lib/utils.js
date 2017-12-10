@@ -1,5 +1,5 @@
 /**
- * Created by 高乐天 on 17/9/26.
+ * Created by Arthur on 2017-12-10.
  */
 const fs = require('fs');
 const path = require('path');
@@ -79,8 +79,8 @@ const helpColor = (template) => {
  */
 const nciConfig = {
   path: {
-    projectPath: projectDir('.ncirc.json'),
-    globalPath: path.join(process.env.HOME, '.ncirc.json'),
+    projectPath: projectDir('.xmlrc.json'),
+    globalPath: path.join(process.env.HOME, '.xmlrc.json'),
   },
   readConfig() {
     const {projectPath, globalPath} = this.path;

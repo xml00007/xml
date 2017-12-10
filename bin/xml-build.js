@@ -3,11 +3,9 @@ const program = require('./lib/commander');
 const fs = require('fs');
 const {title, shell, execSync, mustBeLerna, scriptResolve, projectDir} = require('./lib/utils.js');
 
-mustBeLerna();
+// mustBeLerna();
 
-program
-    .arguments('[clean]')
-    .parse(process.argv);
+program.arguments('[clean]').parse(process.argv);
 
 const clean = () => {
   title('正在清理编译');
@@ -16,12 +14,10 @@ const clean = () => {
 };
 
 const packageJsonRewrite = () => {
-  const jsonPaths = shell(`find building -name package.json -maxdepth 3 -type f`)
-      .trim().split('\n')
-      .filter(item => {
-        let name = require(projectDir(item)).name;
-        return name ? name[0] === '@' : false;
-      });
+  const jsonPaths = shell(`find building -name package.json -maxdepth 3 -type f`).trim().split('\n').filter(item => {
+    let name = require(projectDir(item)).name;
+    return name ? name[0] === '@' : false;
+  });
   jsonPaths.forEach(jsonPath => {
     console.log(projectDir(jsonPath));
     const jsonContent = require(projectDir(jsonPath));
@@ -42,9 +38,12 @@ const build = () => {
 };
 
 if (program.args.length && (program.args[0] === 'clean' || program.args[0] === 'c')) {
-  clean();
+
+  console.log(1111111111);
+  // clean();
 } else {
-  clean();
-  build();
-  packageJsonRewrite();
+  console.log(22222);
+  // clean();
+  // build();
+  // packageJsonRewrite();
 }
