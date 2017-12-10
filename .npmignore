@@ -1,0 +1,7 @@
+.idea
+.npmignore
+.gitignore
+README.md
+nchannel*.tgz
+.git
+nci-config.sh

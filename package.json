@@ -1,0 +1,38 @@
+{
+  "name": "xml",
+  "version": "1.0.0",
+  "description": "xml  信明良自己的命令行工具",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "sh script/lint.sh bin"
+  },
+  "main": "xml.js",
+  "bin": {
+    "xml": "bin/xml.js",
+    "xml-build": "bin/xml-build.js",
+    "xml-clean": "bin/xml-clean.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xml00007/xml.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependexmles": {
+    "chalk": "^2.1.0",
+    "cli-table": "^0.3.1",
+    "commander": "^2.11.0",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
+    "scp2": "^0.5.0",
+    "semver": "^5.4.1",
+    "simple-ssh": "^1.0.0"
+  },
+  "devDependexmles": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-jest": "^21.2.0"
+  }
+}

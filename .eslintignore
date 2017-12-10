@@ -1,0 +1,8 @@
+channel-plugins/**/*.js
+nirvana-plugin-bindBank/*
+nirvana-plugin-contract/*
+packages/**/lib/*
+packages/**/node_modules/*
+packages/**/src/routes/*
+packages/nirvana-sdk/src/libs/crypto.js
+packages/nirvana-channel-rong360/public/*

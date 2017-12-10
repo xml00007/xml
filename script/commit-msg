@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
+
+import subprocess
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+import re
+
+commit_message_format = '{issue_id} {user_message}'
+
+project_format = '[A-Z][A-Z]+'
+
+issue_pattern = '{}-[\d]+'.format(project_format)
+def read_current_message():
+    with open(sys.argv[1], 'r') as f:
+        return f.read()
+
+
+def write_message(message):
+    with open(sys.argv[1], 'w') as f:
+        f.write(message)
+
+
+def contains_message(message):
+    return message and not message.isspace()
+
+
+def remove_editor_help_message(message):
+    return message[:message.find("# Please enter the commit message for your changes.")].rstrip()
+
+
+def read_branch_or_exit():
+    try:
+        current_ref = subprocess.check_output('git symbolic-ref HEAD', shell=True).decode()
+        return current_ref[len('refs/heads/'):]
+    except subprocess.CalledProcessError:
+        print("add-issue-id-hook: Adding issue id failed. Are you in detached HEAD state?")
+        sys.exit()
+
+
+issue_id_match = re.search(issue_pattern, read_branch_or_exit())
+if issue_id_match:
+    found_issue_id = issue_id_match.group()
+    print found_issue_id
+    user_message = remove_editor_help_message(read_current_message())
+
+    if contains_message(user_message) and found_issue_id not in user_message:
+        write_message(commit_message_format.format(issue_id='Feat '+found_issue_id, user_message=user_message+'\r\n\r\n'+'Resolves '+ found_issue_id))

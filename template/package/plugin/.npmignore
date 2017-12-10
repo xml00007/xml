@@ -1,0 +1,5 @@
+.npmignore
+src
+__test__
+node_modules
+yarn.lock
