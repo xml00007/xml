@@ -1,7 +1,7 @@
 {
   "name": "xml-cmd",
   "version": "1.0.0",
-  "description": "xml  信明良自己的命令行工具",
+  "description": "xml-信明良自己的命令行工具",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "sh script/lint.sh bin"

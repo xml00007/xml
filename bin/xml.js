@@ -15,7 +15,8 @@ program
 program
     .command('build', '# 安装依赖并自动链接私有包, -例如：nci bootstrap 或 nci bs').alias('bs')
     .command('logs', '# 分析日志, -例如：xml logs 或 xml l').alias('l')
-    .command('config [set|unset] [key-path] [key-value]', '# JSON风格全局配置 -例如:  "nci cfg set scope @nivana" 配置 scope 为 @nirvana').alias('cfg')
+    .command('webstorm', '# 打开项目, -例如：xml webstorm 或 xml ws').alias('ws')
+    .command('config [set|unset] [key-path] [key-value]', '# JSON风格全局配置 -例如:  "xml cfg set scope @nivana" 配置 scope 为 @nirvana').alias('cfg')
     .command('normalize', '# 统一开发环境, node,lerna,cnpm,n -例如：nci normalize 或 nci normal').alias('normal')
     .command('checkVersion').description('# 检查最新版本并自动升级').alias('check').action(() => checkVersion());
 
