@@ -8,8 +8,8 @@ const workDir = nciConfig.readConfig().workDir;
 const projectName = params[0];
 let cmd = `/usr/local/bin/webstorm `;
 if (projectName) {
-  let servies = shell(`ls ${workDir} | grep ${projectName}`).trim().split('\n');
-  cmd = `/usr/local/bin/webstorm ${workDir + servies[0]}`;
+    let servies = shell(`ls ${workDir} | grep -i ${projectName}`).trim().split('\n');
+    cmd = `/Applications/WebStorm.app/Contents/MacOS/webstorm ${workDir + servies[0]}`;
 }
 log(cmd);
 execSync(cmd);
