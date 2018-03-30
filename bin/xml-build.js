@@ -3,8 +3,6 @@ const program = require('./lib/commander');
 const fs = require('fs');
 const {title, shell, execSync, mustBeLerna, scriptResolve, projectDir} = require('./lib/utils.js');
 
-// mustBeLerna();
-
 program.arguments('[clean]').parse(process.argv);
 
 const clean = () => {
@@ -36,14 +34,12 @@ const build = () => {
     ./node_modules/.bin/gulp
   `);
 };
-
-if (program.args.length && (program.args[0] === 'clean' || program.args[0] === 'c')) {
-
-  console.log(1111111111);
-  // clean();
-} else {
-  console.log(22222);
-  // clean();
-  // build();
-  // packageJsonRewrite();
-}
+clean();
+build();
+// if (program.args.length && (program.args[0] === 'clean' || program.args[0] === 'c')) {
+//   clean();
+// } else {
+//   clean();
+//   build();
+//   packageJsonRewrite();
+// }
