@@ -62,7 +62,7 @@ nci -h
 
 # 配置
 
-> 配置文件路径为： ~/.ncirc.json
+> 配置文件路径为： ~/.xmlrc.json
 
 ```json
 { 
