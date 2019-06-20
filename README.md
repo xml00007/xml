@@ -49,9 +49,8 @@ nci -h
     nci project upgrade 简写 nci pjt up
     
     添加子项目
-    nci submodule|sm add http://gitlab.puhuitech.cn/nirvana-dev/nchannel/nchannel-core.git
-    nci submodule|sm add http://gitlab.puhuitech.cn/nirvana-dev/nchannel/nchannel-openapi.git
-    
+  
+  
     删除指定名称的子项目
     nci submodule|sm rm dependency/nchannel-core 
     
@@ -73,7 +72,7 @@ nci -h
   "registryEmail": "your-npm-email",
   "dockerHost": "company-private-docker-mirror-host",
   "dockerGroup": "your-docker-group",
-  "baseImage": "harbor.finupgroup.com/nchannel/phnode:8",
+  "baseImage": "",
   "dockerUser": "your-docker-user",
   "dockerPass": "your-docker-password",
   "sshHost": "test-server-host",
