@@ -65,13 +65,12 @@ const title = (text) => {
  */
 const helpColor = (template) => {
   return chalk.cyanBright(
-      template
-          .replace(/\n\n/g, '\n')
-          .replace(/(\||\<|\>|\[|\]|=)/g, chalk.white('$1'))
-          .replace(/('.*?')/g, chalk.cyanBright('$1'))
-          .replace(/(# .*)/g, chalk.white('$1'))
-          .replace(/('|# )/g, '')
-          .replace(/(Example:|Commands:|Options:|Usage:|Envirment:)/g, chalk.greenBright('$1')));
+      template.replace(/\n\n/g, '\n').
+          replace(/(\||\<|\>|\[|\]|=)/g, chalk.white('$1')).
+          replace(/('.*?')/g, chalk.cyanBright('$1')).
+          replace(/(# .*)/g, chalk.white('$1')).
+          replace(/('|# )/g, '').
+          replace(/(Example:|Commands:|Options:|Usage:|Envirment:)/g, chalk.greenBright('$1')));
 };
 
 /**
@@ -168,10 +167,7 @@ function excuteRemoteShell(cmd, config) {
     };
 
     const ssh = new SSH(sshConfig);
-    ssh
-        .exec(cmd, {out: console.log.bind(console)})
-        .on('close', () => resolve('ok'))
-        .start()
+    ssh.exec(cmd, {out: console.log.bind(console)}).on('close', () => resolve('ok')).start()
     ;
   });
 }
