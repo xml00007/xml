@@ -1,7 +1,3 @@
-/**
- * Created by 高乐天 on 17/5/19.
- */
-
 const fs = require('fs');
 const path = require('path');
 const rootPath = process.cwd();

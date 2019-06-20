@@ -20,8 +20,7 @@ if (projectName) {
     }
     console.log('项目所在目录====>', dir);
     cmd = `open -a webstorm ` + path.join(dir, servies[0]);
+    log(cmd);
+    execSync(cmd);
 }
-log(cmd);
-execSync(cmd);
-
 

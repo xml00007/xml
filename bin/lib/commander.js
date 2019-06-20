@@ -1,7 +1,3 @@
-/**
- * Created by 高乐天 on 17/9/28.
- */
-
 const {helpColor} = require('./utils');
 const Command = require('commander').Command;
 

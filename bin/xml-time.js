@@ -6,7 +6,7 @@ const {title, shell, execSync, mustBeLerna, scriptResolve, projectDir} = require
 // mustBeLerna();
 
 program.arguments('[clean]').parse(process.argv);
-setInterval(function () {
+setInterval(function() {
     execSync(`/usr/local/bin/babel-node /Users/jinke/Documents/test2/selenium/mofengwo.js`);
 }, 60*1000)
 

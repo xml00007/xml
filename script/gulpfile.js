@@ -1,6 +1,3 @@
-/**
- * Created by 高乐天 on 17/5/11.
- */
 'use strict';
 const plumber = require('gulp-plumber');
 const through = require('through2');
